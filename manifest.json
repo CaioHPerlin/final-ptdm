@@ -1,0 +1,28 @@
+{
+    "name": "Urban Food Fairs Progressive Web App",
+    "short_name": "foodfair-pwa",
+    "icons": [
+        
+    {
+        "src": "images/pwa-icon-256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "images/pwa-icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    },
+    {
+        "src": "images/maskable-512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }
+    ],
+    "lang": "pt-BR",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#19882c",
+    "theme_color": "#19882c"
+}
