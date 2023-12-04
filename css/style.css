@@ -158,7 +158,6 @@ label {
 
 aside{
     box-sizing: border-box;
-    background-color: #eeeff1;
     width: 100%;
     padding: 20px;
 }
@@ -176,6 +175,7 @@ aside{
 }
 
 .item{
+    cursor: pointer;
     display: grid;
     grid-template-columns: 100%;
     align-items: center;
@@ -187,6 +187,11 @@ aside{
     border: 1px solid #ccc;
     margin-bottom: 30px;
     font-size: 14px;
+    transition: .2s;
+}
+
+.item:hover {
+    transform: translateY(-10px);
 }
 
 .item h2{

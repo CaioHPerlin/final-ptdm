@@ -1,4 +1,5 @@
 import { openDB } from "idb";
+import { localizar } from "./main";
 
 let db;
 async function criarDB(){
@@ -26,7 +27,7 @@ async function criarDB(){
         }
         const feiras = await store.getAll();
         const divLista = feiras.map(feira => feiraHTML(feira.titulo, feira.lat, feira.long));
-        listagem(divLista.join(' '));
+        listagem(divLista);
         console.log("db aberto");
     }catch (e) {
         console.log('Erro ao criar banco: ' + e.message);
@@ -51,7 +52,7 @@ async function getFeiras(){
     const feiras = await store.getAll();
     if(feiras){
         const divLista = feiras.map(feira => feiraHTML(feira.titulo, feira.lat, feira.long));
-        listagem(divLista.join(' '));
+        listagem(divLista);
     }
 }
 
@@ -108,13 +109,23 @@ function limparCampos() {
     document.getElementById("longitude").value = '';
 }
 
-function listagem(text){
-    document.getElementById('feiras').innerHTML = text;
+function listagem(list){
+    const feiras = document.getElementById('feiras');
+    feiras.innerHTML = "";
+    list.map(feira => {
+        document.getElementById('feiras').appendChild(feira)
+    })
 }
 
 function feiraHTML(titulo, lat, long){
-    return `<div class="item">
-        <h2>${titulo}</h2>
-        <p>${lat}<br>${long}</p>
-   </div>`
+   const item = document.createElement('div')
+   item.className = "item"
+   item.innerHTML = `<h2>${titulo}</h2> <p>${lat}<br>${long}</p>`
+
+   item.addEventListener('click', () => {
+        localizar(lat, long)
+        document.getElementById('feiraAtual').innerHTML = titulo.toUpperCase() + ":"
+    });
+
+   return item
 }
