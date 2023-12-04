@@ -157,8 +157,10 @@ label {
 }
 
 aside{
+    box-sizing: border-box;
     background-color: #eeeff1;
     width: 100%;
+    padding: 20px;
 }
 
 #pannel{

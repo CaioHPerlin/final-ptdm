@@ -12,6 +12,7 @@
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="css/style.css" />
     <meta name="description" content="Aplicação Web para Localização de Feiras Urbanas no Município de Nova Andradina" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   </head>
   <body>
     <header>
@@ -53,7 +54,7 @@
       <aside>
         <button id="localizacao">localizar</button>
         <iframe id="map"
-          src="https://maps.google.com/maps?q=41.40338,%202.17403&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+          src="http://maps.google.com/maps?q=-22.25398676958308,-53.35252745399215&z=16&output=embed"
           frameborder="0" scrolling="no" style="width: 100%; height: 400px;"></iframe>
       </aside>
     </main>
