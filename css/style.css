@@ -24,15 +24,42 @@ main{
 }
 
 header{
-    padding: 20px;
+    padding: 50px;
     width: 100%;
     color:white;
     background: #19882c;
+    background-image: radial-gradient(ellipse at center,#19882C 1%,#025310 100%);
+}
+
+span{
+    color: white;
+    font-size: 0.8em;
+}
+
+.complement{
+    background: #00420c;
+    margin: 0 0 20px 0;
+    border: none;
+    min-height: 30px;
+}
+
+.category{
+    min-height: 60px;
+    margin: 0 0 0.85em 0;
+    background: #eeeff1;
+    border-top: 4px solid #017b16;
+    padding-left: 8px;
+    padding-top: 4px;
 }
 
 h1{
     color: white;
     font-weight: bold;
+}
+
+h2{
+    color: #017b16;
+    font-weight: 100;
 }
 
 input{
