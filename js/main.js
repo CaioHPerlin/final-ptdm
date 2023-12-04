@@ -49,6 +49,6 @@ capturarPosicao.addEventListener('click', () => {
 export function localizar (lat, long) {
   const embedString = `http://maps.google.com/maps?q=${lat},${long}&z=16&output=embed`;
   
-  document.getElementById('feiraAtual').innerHTML = "SUA LOCALIZAÇÃO"
+  document.getElementById('feiraAtual').innerHTML = "SUA LOCALIZAÇÃO:"
   document.getElementsByTagName('iframe')[0].src = embedString;
 }
