@@ -5,8 +5,9 @@
     <title>FEUNA</title>
     <link rel="icon" type="image/png" sizes="32x32" href="images/pwa-icon-512.png">
     <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#19882c" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="favicon.ico">
     <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="css/style.css" />
@@ -18,9 +19,18 @@
     </header>
     <main>
       <form>
-        <input type="text" placeholder="Nome da Feira" />
-        <input type="number" placeholder="Latitude" />
-        <input type="number" placeholder="Longitude" />
+        <div class="title">
+        <label for="NomeF">Nome da Feira</label>
+        </div>
+        <input type="text" placeholder="Nome da Feira" name="nomedafeira" id="NomeF"/>
+        <div class="title">
+        <label for="latitude">Latitude</label>
+        </div>
+        <input type="number" placeholder="Latitude" id="latitude"/>
+        <div class="title">
+        <label for="longitude">Longitude</label>
+        </div>
+        <input type="number" placeholder="Longitude" id="longitude"/>
         <input type="submit" value="Salvar">
         <input type="reset" value="Limpar">
       </form>
