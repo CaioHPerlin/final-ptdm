@@ -31,7 +31,7 @@ header{
     background-image: radial-gradient(ellipse at center,#19882C 1%,#025310 100%);
 }
 
-span{
+#detail{
     color: white;
     font-size: 0.8em;
 }
@@ -54,12 +54,17 @@ span{
 
 h1{
     color: white;
-    font-weight: bold;
+    font-weight: 800;
+    font-size: 1.7em;
 }
 
 h2{
     color: #017b16;
     font-weight: 100;
+}
+
+form{
+    height: 350px;
 }
 
 input{
@@ -91,7 +96,7 @@ input[type=number]{
 input[type=submit]{
     background-color: #337ab7;
     color: white;
-    padding: 12px 35px;
+    padding: 12px 25px;
     margin-top: 10px;
     border: none;
     border-radius: 4px;
@@ -108,7 +113,7 @@ input[type=submit]:hover{
 input[type=reset]{
     background-color: #337ab7;
     color: white;
-    padding: 12px 32px;
+    padding: 12px 20px;
     margin-top: 10px;
     margin-left: 10px;
     border: none;
@@ -129,28 +134,28 @@ input[type=reset]:hover{
     margin-top: 6px;
 }
 
-label {
+label{
     font-weight: bold;
     padding: 6px 6px 6px 0;
     display: inline-block;
   }
 
-  .row:after {
+  .row:after{
     content: "";
     display: table;
     clear: both;
   }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 550px){
     .title, input[type=text],input[type=number] {
       width: 80%;
       margin-top: 0;
     }
   }
 
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 412px){
     .title, input[type=text],input[type=number] {
-      width: 90%;
+      width: 100%;
       margin-top: 0;
     }
   }
